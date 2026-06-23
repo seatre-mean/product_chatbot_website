@@ -36,25 +36,20 @@ def keyword_score(message, keywords):
     return score
 
 
-def get_suggestions(product_data):
-    return [faq["question"] for faq in product_data["faqs"][:4]]
-
-
 def get_bot_reply(user_message):
     product_data = load_product_data()
     message = clean_text(user_message)
 
     if not message:
         return {
-            "reply": "Please type a question.",
-            "suggestions": get_suggestions(product_data)
+            "reply": "Please type a question."
         }
 
     greetings = ["hi", "hello", "hey", "hii", "good morning", "good evening"]
+
     if message in greetings:
         return {
-            "reply": f"Hi! I am the {product_data['product_name']} assistant. You can ask me about price, features, download, refund, or support.",
-            "suggestions": get_suggestions(product_data)
+            "reply": f"Hi! I am the {product_data['product_name']} assistant. You can ask me about price, features, download, refund, or support."
         }
 
     best_faq = None
@@ -71,20 +66,11 @@ def get_bot_reply(user_message):
 
     if best_faq and best_score >= 0.35:
         return {
-            "reply": best_faq["answer"],
-            "matched_question": best_faq["question"],
-            "confidence": round(best_score, 2),
-            "suggestions": get_suggestions(product_data)
+            "reply": best_faq["answer"]
         }
 
-    fallback = (
-        "Sorry, I could not find the exact answer. "
-        f"You can ask about price, features, download, refund, or contact support at {product_data['contact_email']}."
-    )
-
     return {
-        "reply": fallback,
-        "suggestions": get_suggestions(product_data)
+        "reply": f"Sorry, I could not find the exact answer. You can ask about price, features, download, refund, or contact support at {product_data['contact_email']}."
     }
 
 
