@@ -26,15 +26,19 @@ function addMessage(text, type, extraClass = "") {
     const messageDiv = document.createElement("div");
     messageDiv.className = `message ${type}-message ${extraClass}`;
     messageDiv.textContent = text;
+
     chatbotMessages.appendChild(messageDiv);
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
     return messageDiv;
 }
 
 async function sendMessage(customMessage = null) {
     const message = customMessage || chatbotInput.value.trim();
 
-    if (!message) return;
+    if (!message) {
+        return;
+    }
 
     openChatbot();
 
@@ -49,11 +53,13 @@ async function sendMessage(customMessage = null) {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ message })
+            body: JSON.stringify({ message: message })
         });
 
         const data = await response.json();
+
         loadingMessage.remove();
+
         addMessage(data.reply, "bot");
 
     } catch (error) {
