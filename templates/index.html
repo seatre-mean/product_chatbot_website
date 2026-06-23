@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ product.product_name }} Chatbot Website</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="/static/styles.css?v=3">
 </head>
+
 <body>
 
     <header class="site-header">
         <nav class="navbar">
             <div class="logo">{{ product.product_name }}</div>
+
             <div class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#faq">FAQ</a>
@@ -21,15 +25,25 @@
     </header>
 
     <main>
+
         <section class="hero">
             <div class="hero-content">
                 <p class="eyebrow">Smart product assistant included</p>
+
                 <h1>{{ product.tagline }}</h1>
-                <p class="hero-text">{{ product.description }}</p>
+
+                <p class="hero-text">
+                    {{ product.description }}
+                </p>
 
                 <div class="hero-actions">
-                    <a href="{{ product.purchase_link }}" class="primary-button">Buy Now - {{ product.price }}</a>
-                    <button class="secondary-button" onclick="openChatbot()">Ask Chatbot</button>
+                    <a href="{{ product.purchase_link }}" class="primary-button">
+                        Buy Now - {{ product.price }}
+                    </a>
+
+                    <button class="secondary-button" onclick="openChatbot()">
+                        Ask Chatbot
+                    </button>
                 </div>
 
                 <div class="trust-row">
@@ -41,10 +55,21 @@
 
             <div class="hero-card">
                 <div class="mini-chat">
-                    <div class="mini-chat-header">Product Assistant</div>
-                    <div class="mini-message bot">Hi! Ask me about this product.</div>
-                    <div class="mini-message user">What is included?</div>
-                    <div class="mini-message bot">Daily, weekly, monthly and yearly planning pages are included.</div>
+                    <div class="mini-chat-header">
+                        Product Assistant
+                    </div>
+
+                    <div class="mini-message bot">
+                        Hi! Ask me about this product.
+                    </div>
+
+                    <div class="mini-message user">
+                        What is included?
+                    </div>
+
+                    <div class="mini-message bot">
+                        Daily, weekly, monthly and yearly planning pages are included.
+                    </div>
                 </div>
             </div>
         </section>
@@ -69,20 +94,37 @@
         <section id="chat" class="section chat-demo-section">
             <div class="chat-demo-text">
                 <p class="eyebrow">Live chatbot</p>
+
                 <h2>Customers can ask questions before buying</h2>
+
                 <p>
                     This chatbot answers common product questions like price, features, delivery,
                     refund policy, compatibility, and support.
                 </p>
-                <button class="primary-button" onclick="openChatbot()">Try the Chatbot</button>
+
+                <button class="primary-button" onclick="openChatbot()">
+                    Try the Chatbot
+                </button>
             </div>
 
             <div class="chat-demo-box">
                 <h3>Try asking:</h3>
-                <button onclick="askFromButton('What is this product?')">What is this product?</button>
-                <button onclick="askFromButton('What is the price?')">What is the price?</button>
-                <button onclick="askFromButton('How will I receive it?')">How will I receive it?</button>
-                <button onclick="askFromButton('Can I get a refund?')">Can I get a refund?</button>
+
+                <button onclick="askFromButton('What is this product?')">
+                    What is this product?
+                </button>
+
+                <button onclick="askFromButton('What is the price?')">
+                    What is the price?
+                </button>
+
+                <button onclick="askFromButton('How will I receive it?')">
+                    How will I receive it?
+                </button>
+
+                <button onclick="askFromButton('Can I get a refund?')">
+                    Can I get a refund?
+                </button>
             </div>
         </section>
 
@@ -101,26 +143,36 @@
                 {% endfor %}
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
-        <p>Need help? Contact us at <a href="mailto:{{ product.contact_email }}">{{ product.contact_email }}</a></p>
+        <p>
+            Need help? Contact us at
+            <a href="mailto:{{ product.contact_email }}">
+                {{ product.contact_email }}
+            </a>
+        </p>
     </footer>
 
+    <!-- Floating chatbot button -->
     <button id="chatbot-toggle" onclick="toggleChatbot()">💬</button>
 
+    <!-- Chatbot panel -->
     <div id="chatbot-panel">
         <div class="chatbot-header">
             <div>
                 <strong>{{ product.product_name }} Assistant</strong>
                 <small>Usually replies instantly</small>
             </div>
+
             <button onclick="closeChatbot()">×</button>
         </div>
 
         <div id="chatbot-messages">
             <div class="message bot-message">
-                Hi! I can answer questions about {{ product.product_name }}. Ask me about price, features, delivery, refund, or support.
+                Hi! I can answer questions about {{ product.product_name }}.
+                Ask me about price, features, delivery, refund, or support.
             </div>
         </div>
 
@@ -136,6 +188,8 @@
         </div>
     </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- JS file -->
+    <script src="/static/script.js?v=3"></script>
+
 </body>
 </html>
