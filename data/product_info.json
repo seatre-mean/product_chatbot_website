@@ -1,0 +1,131 @@
+{
+    "product_name": "Ultimate Digital Planner",
+    "tagline": "Plan your day, week, month, and year in one simple digital journal.",
+    "description": "A clean and beginner-friendly digital planner that helps users organize tasks, goals, habits, notes, and yearly plans.",
+    "price": "\u20b9299",
+    "contact_email": "support@example.com",
+    "purchase_link": "#",
+    "features": [
+        "Daily planner pages",
+        "Weekly planner pages",
+        "Monthly planner pages",
+        "Yearly goal planning",
+        "Habit tracker",
+        "Notes and reflection pages",
+        "Instant digital download"
+    ],
+    "faqs": [
+        {
+            "question": "What is this product?",
+            "answer": "This is an Ultimate Digital Planner with daily, weekly, monthly, and yearly planning pages. It helps you organize tasks, goals, habits, notes, and reflections.",
+            "keywords": [
+                "product",
+                "planner",
+                "digital planner",
+                "journal",
+                "what is"
+            ]
+        },
+        {
+            "question": "What is included in the planner?",
+            "answer": "The planner includes daily pages, weekly pages, monthly pages, yearly planning pages, habit tracking, notes, and reflection sections.",
+            "keywords": [
+                "included",
+                "pages",
+                "daily",
+                "weekly",
+                "monthly",
+                "yearly",
+                "habit",
+                "notes"
+            ]
+        },
+        {
+            "question": "What is the price?",
+            "answer": "The current sample price is \u20b9299. You can edit the price in data/product_info.json.",
+            "keywords": [
+                "price",
+                "cost",
+                "amount",
+                "how much",
+                "rate"
+            ]
+        },
+        {
+            "question": "How will I receive the product?",
+            "answer": "Since this is a digital product, the customer receives it as an instant download after purchase.",
+            "keywords": [
+                "receive",
+                "download",
+                "delivery",
+                "shipping",
+                "instant"
+            ]
+        },
+        {
+            "question": "Is this a physical product?",
+            "answer": "No, this is a digital product. Nothing will be shipped physically.",
+            "keywords": [
+                "physical",
+                "shipping",
+                "printed",
+                "hard copy"
+            ]
+        },
+        {
+            "question": "Can I print the planner?",
+            "answer": "Yes, you can print the planner for personal use if the file format supports printing.",
+            "keywords": [
+                "print",
+                "printing",
+                "paper",
+                "hard copy"
+            ]
+        },
+        {
+            "question": "Can I use it on mobile or tablet?",
+            "answer": "Yes, you can use the planner on a phone, tablet, laptop, or any device that supports PDF or digital note-taking apps.",
+            "keywords": [
+                "mobile",
+                "tablet",
+                "phone",
+                "ipad",
+                "laptop",
+                "device",
+                "pdf"
+            ]
+        },
+        {
+            "question": "Can I get a refund?",
+            "answer": "For digital products, refunds usually depend on your store policy. You can edit this answer according to your actual refund rules.",
+            "keywords": [
+                "refund",
+                "return",
+                "money back",
+                "cancel"
+            ]
+        },
+        {
+            "question": "How can I contact support?",
+            "answer": "You can contact support at support@example.com. Replace this email with your real support email in data/product_info.json.",
+            "keywords": [
+                "contact",
+                "support",
+                "email",
+                "help",
+                "customer care"
+            ]
+        },
+        {
+            "question": "How do I buy this product?",
+            "answer": "Click the Buy Now button on the website. You can replace the sample purchase link with your real Gumroad, Payhip, Instamojo, Etsy, or store link.",
+            "keywords": [
+                "buy",
+                "purchase",
+                "order",
+                "payment",
+                "checkout"
+            ]
+        }
+    ]
+}
